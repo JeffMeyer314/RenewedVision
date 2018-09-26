@@ -1,0 +1,14 @@
+G:\GitRepos\RenewedVision\Highlights\Highlights\bin\Release\Highlights.exe.config
+G:\GitRepos\RenewedVision\Highlights\Highlights\bin\Release\Highlights.exe
+G:\GitRepos\RenewedVision\Highlights\Highlights\bin\Release\Highlights.pdb
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\MainWindow.g.cs
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\App.g.cs
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights_MarkupCompile.cache
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights_MarkupCompile.lref
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\MainWindow.baml
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.g.resources
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.Properties.Resources.resources
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.csproj.GenerateResource.cache
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.csproj.CoreCompileInputs.cache
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.exe
+G:\GitRepos\RenewedVision\Highlights\Highlights\obj\Release\Highlights.pdb
