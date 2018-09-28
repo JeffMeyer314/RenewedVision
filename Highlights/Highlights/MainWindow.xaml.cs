@@ -61,7 +61,14 @@ namespace Highlights
         {
             rtb.Dispatcher.BeginInvoke(new Action(() =>
             {
-                TextPointer savePos = SavePosition();
+                int totalChars = 0;
+                int offset = 0;
+                foreach ( TextChange change in e.Changes)
+                {
+                    totalChars = change.AddedLength - change.RemovedLength;
+                    offset = change.Offset;
+                }
+                int savePos = SavePosition(totalChars, offset);
                 rtb.TextChanged -= Rtb_TextChanged;
                 CheckKeyword(rtb);
                 rtb.TextChanged += Rtb_TextChanged;
@@ -70,18 +77,36 @@ namespace Highlights
 
         }
 
-        TextPointer SavePosition()
+        int SavePosition(int adj, int offset)
         {
-            TextPointer tp = rtb.CaretPosition.GetNextInsertionPosition(LogicalDirection.Forward);
+            int  so;
+            if (rtb.CaretPosition.IsAtInsertionPosition)
+            {
+                so = offset + adj;
+            }
+            else
+            {
+                so = rtb.CaretPosition.GetNextInsertionPosition(LogicalDirection.Forward).GetOffsetToPosition(rtb.CaretPosition);
+            }
+            
 
-            return tp;
+            return so;
         }
 
-        void getPos(TextPointer tp)
+        void getPos(int so)
         {
             try
             {
-                rtb.CaretPosition = tp;
+                TextPointer tp;
+                tp  = rtb.CaretPosition.GetPositionAtOffset(so);
+                if (tp.IsAtInsertionPosition)
+                {
+                    rtb.CaretPosition = tp;
+                }
+                else
+                {
+                    rtb.CaretPosition = tp.GetNextInsertionPosition(LogicalDirection.Forward);
+                }
             }
             catch (Exception exc)
             {

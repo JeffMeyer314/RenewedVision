@@ -54,4 +54,5 @@ using System.Windows;
 //==================================================================================================================================
 //1.0.0.0   original version using mouse click to test parsing/highlighting algorithm
 //1.2.0.0   Change to use TextChanged event
-[assembly: AssemblyFileVersion("1.0.0.0")]
+//1.3.0.0   Fixed Logic for Saving position of insertion point
+[assembly: AssemblyFileVersion("1.3.0.0")]

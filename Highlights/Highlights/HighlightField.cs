@@ -68,7 +68,7 @@ namespace Highlights
                     if ( !( char.IsWhiteSpace(prev) || prev.Equals('#') || prev.Equals('@')) )
                     {
                         newstate = StateEnum.None;
-                        addBefore = true;
+                        addBefore = (CurState.Equals(StateEnum.User)) ? false :true;
                     }
                     switch (CurState)
                     {
